@@ -1,0 +1,9 @@
+{
+  "name": "nuxt-blog",
+  "version": "0.0.1",
+  "description": "A simple nuxt + vue + koa + mysql blog",
+  "main": "index.js",
+  "repository": "https://github.com/pavlovt/nuxt-blog",
+  "author": "Todor Pavlov <pavlovt@gmail.com>",
+  "license": "MIT"
+}

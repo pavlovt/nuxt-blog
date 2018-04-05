@@ -1,0 +1,15 @@
+{
+  "name": "nuxt2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.0",
+    "markdown-it-attrs": "^1.2.1",
+    "markdown-it-container": "^2.0.0",
+    "nuxt": "^1.4.0"
+  },
+  "scripts": {
+    "start": "nuxt"
+  }
+}
