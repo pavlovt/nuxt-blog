@@ -31,22 +31,22 @@ const knex = Knex(conf.knex);
 // your server this is all you have to do. For multi database systems, see
 // the Model.bindKnex method.
 Model.knex(knex);
-
+console.log(__dirname)
 // creates koa app, registers all controller routes and returns you express app instance
 const app = createKoaServer({
-   controllers: [UserCtrl]
+   controllers: [__dirname + "/ctrl/*.js"]
 });
 
-const engine = new ApolloEngine({
+/*const engine = new ApolloEngine({
   apiKey: "service:pavlovt-tst:x0z0YlR7z-9o91ioRd29Fg",
   logging: {
     level: "DEBUG" // Engine Proxy logging level. DEBUG, INFO (default), WARN or ERROR.
   }
-});
+});*/
 
 app.use(koaBody());
 
-router.post('/graphql', graphqlKoa({ schema }));
+/*router.post('/graphql', graphqlKoa({ schema }));
 router.get('/graphql', graphiqlKoa({ endpointURL: '/graphql' }));
 
 app.use(router.routes());
@@ -54,4 +54,6 @@ app.use(router.routes());
 engine.listen({
   port: 3000,
   koaApp: app,
-});
+});*/
+
+app.listen(4000);
