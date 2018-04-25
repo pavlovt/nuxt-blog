@@ -1,42 +1,31 @@
 {
-  "name": "admin",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test": "vue-cli-service test",
-    "e2e": "vue-cli-service e2e",
-    "e2e:open": "vue-cli-service e2e:open"
+    "start": "parcel index.html"
   },
   "dependencies": {
     "bootstrap": "^4.1.0",
-    "bootstrap-vue": "^2.0.0-rc.6",
+    "iview": "^2.13.1",
+    "jquery": "1.9.1 - 3",
+    "npm": "^6.0.0",
+    "popper.js": "^1.14.0",
     "register-service-worker": "^1.0.0",
-    "vue": "^2.5.13",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^6.0.0",
+    "vue": "^2.5.16",
+    "vue-hot-reload-api": "^2.3.0",
+    "vue-meta": "^1.5.0",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "vuex-pathify": "^1.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^22.0.1",
-    "@vue/cli-plugin-babel": "^3.0.0-beta.6",
-    "@vue/cli-plugin-e2e-cypress": "^3.0.0-beta.6",
-    "@vue/cli-plugin-pwa": "^3.0.0-beta.6",
-    "@vue/cli-plugin-typescript": "^3.0.0-beta.6",
-    "@vue/cli-plugin-unit-jest": "^3.0.0-beta.6",
-    "@vue/cli-service": "^3.0.0-beta.6",
-    "@vue/test-utils": "^1.0.0-beta.10",
-    "babel-core": "^7.0.0-0",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "ts-jest": "^22.0.1",
-    "vue-template-compiler": "^2.5.13"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+    "@vue/component-compiler-utils": "^1.1.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-vue": "^2.0.2",
+    "node-sass": "^4.8.3",
+    "vue-template-compiler": "^2.5.16"
+  }
 }
