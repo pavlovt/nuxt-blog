@@ -9,4 +9,6 @@ export default {
         database: 'blog'
       }
     },
+    // public routes
+    public: ['login'],
 }

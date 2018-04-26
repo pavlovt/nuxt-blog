@@ -3,8 +3,8 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
 
     "lib": ["es2017", "dom", "esnext.asynciterable"],
     "module": "commonjs",

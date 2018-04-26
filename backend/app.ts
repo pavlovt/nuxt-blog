@@ -3,7 +3,8 @@ rooty('./dist');
 
 import 'reflect-metadata'; // this shim is required
 import {createKoaServer} from 'routing-controllers';
-const { ApolloEngine } = require('apollo-engine');
+// const { ApolloEngine } = require('apollo-engine');
+import _ from 'lodash';
 var koaBody = require('koa-bodyparser');
 import { graphqlKoa, graphiqlKoa } from 'apollo-server-koa';
 var Router = require('koa-router');
@@ -31,7 +32,7 @@ const knex = Knex(conf.knex);
 // your server this is all you have to do. For multi database systems, see
 // the Model.bindKnex method.
 Model.knex(knex);
-console.log(__dirname)
+
 // creates koa app, registers all controller routes and returns you express app instance
 const app = createKoaServer({
    controllers: [__dirname + "/ctrl/*.js"]
@@ -44,8 +45,24 @@ const app = createKoaServer({
   }
 });*/
 
+// sessions
+const session = require('koa-session')
+app.keys = ['ijkhfa;lsjfm fgpoiu3qp9084um asdl;kasdj, mfpoajcpaoi']
+app.use(session({}, app))
+
 app.use(koaBody());
 
+// authentication
+require('./auth')
+const passport = require('koa-passport')
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use(router.routes());
+router.all('*', (ctx, next) => {
+	console.log(ctx);
+	next();
+});
 /*router.post('/graphql', graphqlKoa({ schema }));
 router.get('/graphql', graphiqlKoa({ endpointURL: '/graphql' }));
 
