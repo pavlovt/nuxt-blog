@@ -9,7 +9,15 @@
 </template>
 
 <script>
+  import * as _ from 'lodash';
+  window._ = _
+  import msg from '~/app/core/msg'
+  window.msg = msg
+  import api from '~/app/core/api'
+  window.api = api
+
   import '~/app/styles/base.scss';
+  import headful from 'headful';
   
   export default {
     name: 'app',

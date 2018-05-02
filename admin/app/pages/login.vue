@@ -15,7 +15,7 @@
   // import iView from 'iview';
   import xinput from '~app/comps/form/xinput'
   import xaction from '~app/comps/form/xaction'
-
+  
   export default {
     name: 'login',
     metaInfo: {
@@ -32,14 +32,7 @@
     },
     methods: {
       submit() {
-        console.log('submit!!!', this.frm)
-        /*this.$refs.form.validate((valid) => {
-            if (valid) {
-                this.$Message.success('Success!');
-            } else {
-                this.$Message.error('Fail!');
-            }
-        })*/
+        // api.get('/posts')
       }
     },
     mounted() {
