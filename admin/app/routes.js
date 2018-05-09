@@ -5,6 +5,7 @@ import About from './pages/about.vue'
 import Login from './pages/login.vue'
 
 Vue.use(Router)
+Vue.component('Login', Login)
 
 export default new Router({
   routes: [

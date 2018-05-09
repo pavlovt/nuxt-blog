@@ -1,3 +1,4 @@
 node_modules
 dist
-backend/yarn-error.log
+yarn-error.log
+yarn-error.lock
