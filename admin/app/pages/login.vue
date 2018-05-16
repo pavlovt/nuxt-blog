@@ -11,6 +11,8 @@
 </template>
 
 <script>
+  const t = require('./t.ehtml');
+  console.log('ttt', t)
   import _ from 'lodash';
   // import iView from 'iview';
   import xinput from '~app/comps/form/xinput'
