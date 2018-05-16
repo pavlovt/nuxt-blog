@@ -1,31 +1,39 @@
+import Vue from "vue";
+import VeeValidate from 'vee-validate';
 import app from './app/app.vue';
 import router from './app/routes';
 import Router from 'vue-router'
-import Meta from 'vue-meta';
-import bs from 'bootstrap';
+import 'bootstrap';
+import './app/store/index.store'
 import '~/node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import iView from 'iview';
-// import 'iview/dist/styles/iview.css';
-import _ from 'lodash';
 
-Vue.use(Router);
-Vue.use(Meta);
-// Vue.use(iView);
+// import VeeValidate from 'vee-validate'
+// window.VeeValidate = VeeValidate
 
-// register iView components
-// Vue.component()
+
+/*import VeeValidate from 'vee-validate';
+window.VeeValidate = VeeValidate
+console.log(VeeValidate)
+window.Vue.use(window.VeeValidate)*/
+// Vue.use(VeeValidate)
+// Vue.directive('validate', VeeValidate.directive)
+// Vue.mixin(VeeValidate.mixin)
+
 const components = {
     app,
     // ..._.omit(iView, ['i18n', 'install', 'lang', 'locale', 'version'])
   }
 // console.log(components)
 window.onload = () => {
+  Vue.use(VeeValidate)
+  Vue.use(Router)
   /* eslint-disable */
   new Vue({
     /* eslint-enable */
     el: 'app',
     router,
     components: components,
+    render: h => h(app),
   });
 };
 
