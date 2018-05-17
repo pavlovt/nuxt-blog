@@ -1,8 +1,8 @@
 <template lang="ehtml">
-  div.row {
-      div.col {
-          form :submit=submit() {
-              input type=number {}
+  .row {
+      .col {
+          form @submit.prevent=submit {
+              input v-model="frm.z" {}
 
               button.btn.btn-primary { 'Submit' }
           }
@@ -20,8 +20,15 @@ export default {
   components: {
     HelloWorld
   },
+  data() {
+    return {
+      frm: {}
+    }
+  },
   methods: {
-    submit() {}
+    submit() {
+      console.log(this.frm)
+    }
   }
 }
 </script>
