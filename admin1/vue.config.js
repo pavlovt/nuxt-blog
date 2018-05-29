@@ -1,3 +1,4 @@
+// const ProvidePlugin = require('webpack/lib/ProvidePlugin');
 module.exports = {
   // configure webpack-dev-server behavior
   devServer: {
@@ -46,13 +47,13 @@ module.exports = {
           ]
         })
 
-    /*config.module.rules.push({
-          test: /\.ehtml$/,
-          exclude: /node_modules/,
-          use: {
-            loader: "easy-html-webpack-loader"
-          }
-      })*/
+    /*config.module.plugins = [
+      new ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        _: 'lodash',
+      })
+    ]*/
 
   }
 }

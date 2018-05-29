@@ -18,8 +18,34 @@
   // import iView from 'iview';
   import xinput from '../el/form/xinput'
   import xaction from '../el/form/xaction'
+  import head from '../core/head'
+
+  head.init({preTitle: 'zz - ', postTitle: ' - qqq', title: 'hohoho', z: {q:5}})
+  head.update()
+
+  const data = function () {
+    return {
+      frm: { username: '', password: ''},
+    };
+  }
+
+  const methods = {
+    submit() {
+      console.log('zzz')
+      // api.get('/posts')
+    }
+  }
+
+  const events = {
+    beforeCreate() {
+
+    },
+    mounted() {
+
+    },
+  }
   
-  export default {
+  const main = {
     name: 'login',
     metaInfo: {
       title: 'Login'
@@ -28,23 +54,9 @@
       // ..._.omit(iView, ['i18n', 'install', 'lang', 'locale', 'version', 'Circle', 'Switch'])
       xinput, xaction,
     },
-    data() {
-      return {
-        frm: { username: '', password: ''},
-      };
-    },
-    methods: {
-      submit() {
-        console.log('zzz')
-        // api.get('/posts')
-      }
-    },
-    beforeCreate() {
-
-    },
-    mounted() {
-    },
   };
+
+  export default {...main, data, methods, ...events }
 </script>
 
 <style lang="scss">
