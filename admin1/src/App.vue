@@ -21,6 +21,10 @@
   // import api from './core/api'
   // window.api = api
 
+  // init html head
+  import head from './core/head'
+  head.init(conf.head)
+
   export default {
     name: 'app',
   }

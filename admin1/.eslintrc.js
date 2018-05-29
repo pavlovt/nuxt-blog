@@ -6,5 +6,9 @@ module.exports = {
   ],
   "rules": {
   	'no-unused-vars': 0,
+  },
+  "globals": {
+    "$": true,
+    "_": true
   }
 }

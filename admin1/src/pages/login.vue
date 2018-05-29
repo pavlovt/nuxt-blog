@@ -20,18 +20,13 @@
   import xaction from '../el/form/xaction'
   import head from '../core/head'
 
-  head.init({preTitle: 'zz - ', postTitle: ' - qqq', title: 'hohoho', z: {q:5}})
-  head.update()
-
-  const data = function () {
-    return {
-      frm: { username: '', password: ''},
-    };
-  }
+  const data = () => ({
+    frm: { username: '', password: ''},
+  })
 
   const methods = {
     submit() {
-      console.log('zzz')
+      console.log('frm', this.frm)
       // api.get('/posts')
     }
   }
@@ -47,14 +42,14 @@
   
   const main = {
     name: 'login',
-    metaInfo: {
-      title: 'Login'
-    },
+    title: 'Login',
     components: {
       // ..._.omit(iView, ['i18n', 'install', 'lang', 'locale', 'version', 'Circle', 'Switch'])
       xinput, xaction,
     },
   };
+
+  head.update({title: main.title})
 
   export default {...main, data, methods, ...events }
 </script>

@@ -15,7 +15,6 @@ export default {
     title(conf) {
       // $('head title').remove()
       const title = conf.preTitle + conf.title + conf.postTitle;
-      console.log($('head title'))
       $('head title').html(title)
     },
 
@@ -35,7 +34,7 @@ export default {
         }
 
         tag += ' >'
-console.log('tag', tag)
+
         tags.push(tag)
       })
     }
