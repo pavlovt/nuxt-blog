@@ -9,7 +9,7 @@ export default {
 		const conf = _.assign({},  this.conf, add || {})
 
     this.set.title(conf)
-    this.set.meta(conf)
+    // this.set.meta(conf)
 	},
   set: {
     title(conf) {

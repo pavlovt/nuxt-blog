@@ -18,7 +18,6 @@
   // import iView from 'iview';
   import xinput from '../el/form/xinput'
   import xaction from '../el/form/xaction'
-  import head from '../core/head'
 
   const data = () => ({
     frm: { username: '', password: ''},
@@ -48,8 +47,6 @@
       xinput, xaction,
     },
   };
-
-  head.update({title: main.title})
 
   export default {...main, data, methods, ...events }
 </script>
