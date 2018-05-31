@@ -17,6 +17,8 @@ import HelloWorld from '@/el/HelloWorld.vue'
 // console.log('ttt', t)
 export default {
   name: 'home',
+  title: 'Home',
+  path: '/',
   components: {
     HelloWorld
   },
