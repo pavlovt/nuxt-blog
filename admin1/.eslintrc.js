@@ -9,6 +9,8 @@ module.exports = {
   },
   "globals": {
     "$": true,
-    "_": true
+    "_": true,
+    "api": true,
+    "msg": true
   }
 }

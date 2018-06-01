@@ -16,10 +16,10 @@
   window._ = _
   import conf from './core/conf'
   window.conf = conf
-  // import msg from './core/msg'
-  // window.msg = msg
-  // import api from './core/api'
-  // window.api = api
+  import msg from './core/msg'
+  window.msg = msg
+  import api from './core/api'
+  window.api = api
 
   // init html head
   import head from './core/head'
