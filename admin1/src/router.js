@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+
 import Home from './pages/home.page.vue'
 import About from './pages/about.page.vue'
 import Login from './pages/login.page.vue'
+import NotFound from './pages/notfound.page.vue'
+
 import head from './core/head'
 Vue.use(Router)
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -25,6 +29,12 @@ const router = new Router({
       name: 'login',
       meta: {title: 'Login'},
       component: Login
+    },
+    {
+      path: '*',
+      name: 'notfound',
+      meta: {title: 'Login'},
+      component: NotFound
     }
   ]
 })
