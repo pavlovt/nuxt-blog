@@ -1,9 +1,12 @@
-const state = {
 
+const state = {
+  posts: [1,2,3]
 }
 
 const actions = {
-	
+	get() {
+    return 'zzz'
+  }
 }
 
 const getters = {

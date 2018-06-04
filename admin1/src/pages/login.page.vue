@@ -19,6 +19,8 @@
   import xinput from '../el/form/xinput'
   import xaction from '../el/form/xaction'
 
+  import { sync } from 'vuex-pathify'
+
   const data = () => ({
     frm: { username: '', password: ''},
   })
@@ -35,8 +37,12 @@
 
     },
     mounted() {
-
+      console.log(this.$store)
     },
+  }
+
+  const computed = {
+    ...sync('posts/*')
   }
   
   const main = {
@@ -49,7 +55,7 @@
     },
   };
 
-  export default {...main, data, methods, ...events }
+  export default {...main, data, methods, ...events, computed }
 </script>
 
 <style lang="scss">
