@@ -10,7 +10,7 @@ const actions = {
 }
 
 const getters = {
-	
+	data: _ => state.posts
 }
 
 const mutations = {

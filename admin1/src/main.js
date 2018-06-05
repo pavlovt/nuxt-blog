@@ -15,6 +15,7 @@ import corePlugin from './core/core.plugin'
 
 Vue.config.productionTip = false
 
+window.s = store
 Vue.use(VeeValidate)
 Vue.use(BootstrapVue)
 Vue.use(corePlugin)

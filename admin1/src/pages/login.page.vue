@@ -34,15 +34,18 @@
 
   const events = {
     beforeCreate() {
+      _.assign(this.computed, sync('posts/*'))
 
     },
     mounted() {
-      console.log(this.$store)
+      console.log(this.posts)
+      this.act('posts/get')
+      .then(r => console.log(r))
     },
   }
 
   const computed = {
-    ...sync('posts/*')
+    // ...sync('posts/*')
   }
   
   const main = {

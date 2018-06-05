@@ -25,6 +25,8 @@
   import head from './core/head'
   head.init(conf.head)
 
+  import { sync } from 'vuex-pathify'
+
   export default {
     name: 'app',
   }
