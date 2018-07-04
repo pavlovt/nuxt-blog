@@ -1,9 +1,0 @@
-div.login {
-  h1  { 'Login page' } '
-  {{frm}}
-  ' form.col-4.offset-4 @submit.prevent=submit {
-    xinput  name=username label=Username v-model=frm.username zzz=zzz {}
-    xinput  name=password label=Password type=password v-model=frm.password {}
-    xaction  { 'Submit' }
-  }
-}
