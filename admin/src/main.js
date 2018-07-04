@@ -1,8 +1,9 @@
-import 'jquery'
+// import 'jquery'
 import Vue from 'vue'
+import corePlugin from './core/core.plugin'
+Vue.use(corePlugin)
 import App from './App.vue'
 import router from './router'
-import store from './store/index.store'
 import './registerServiceWorker'
 import VeeValidate from 'vee-validate'
 import BootstrapVue from 'bootstrap-vue'
@@ -10,18 +11,21 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import corePlugin from './core/core.plugin'
-// import global from './core/global'
+import {observable, isObservable, toJS} from 'mobx';
+import VueMobx from 'vue-mobx';
 
 Vue.config.productionTip = false
 
-window.s = store
 Vue.use(VeeValidate)
 Vue.use(BootstrapVue)
-Vue.use(corePlugin)
+
+Vue.use(VueMobx, {
+    toJS: toJS, // must
+    isObservable: isObservable, // must
+    observable: observable,  // optional
+})
 
 new Vue({
-  store,
   router,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')

@@ -1,20 +1,25 @@
+import * as form from '../parts/form'
+import store from '../store/index.store'
+
 export default {
   install(Vue, options) {
-    // Vue.component(MyComponent.name, MyComponent)
-    // Vue.directive(MyDirective.name, MyDirective)
+    // register methods and hooks in all app components
     Vue.mixin({
       created() {
         // add the store to each component
-        this.s = window.s
+        this.s = store
       },
       methods: {
-        // run this action for the selected store
-        act(action) {
-          return this.$store.dispatch('posts/get')
-        }
+        
       }
     })
 
+    // register all form components
+    _(form).forIn((val, key) => {
+      Vue.component(key, val)
+    })
+    
+    // register filter
     Vue.filter('capitalize', function (value) {
       if (!value) return ''
       value = value.toString()

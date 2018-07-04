@@ -14,13 +14,6 @@
 </template>
 
 <script>
-  import _ from 'lodash';
-  // import iView from 'iview';
-  import xinput from '../el/form/xinput'
-  import xaction from '../el/form/xaction'
-
-  import { sync } from 'vuex-pathify'
-
   const data = () => ({
     frm: { username: '', password: ''},
   })
@@ -54,7 +47,7 @@
     path: '/login',
     components: {
       // ..._.omit(iView, ['i18n', 'install', 'lang', 'locale', 'version', 'Circle', 'Switch'])
-      xinput, xaction,
+      // xinput, xaction,
     },
   };
 

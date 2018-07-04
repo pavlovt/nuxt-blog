@@ -12,7 +12,7 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/el/HelloWorld.vue'
+// import HelloWorld from '@/el/HelloWorld.vue'
 // const t = require('./t.ehtml')
 // console.log('ttt', t)
 export default {
@@ -20,7 +20,6 @@ export default {
   title: 'Home',
   path: '/',
   components: {
-    HelloWorld
   },
   data() {
     return {

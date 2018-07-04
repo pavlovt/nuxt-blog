@@ -3,15 +3,20 @@
     div id=nav {
       router-link  to=/login { 'Login' } ' | ' 
       router-link  to=/ { 'Home' } ' | ' 
-      router-link  to=/about { 'About' }
+      router-link  to=/about { 'About' } ' | '
+      router-link  to=/contact { 'Contact' }
     }
     router-view  {}
   }
 </template>
 
 <script>
-  import * as jq from 'jquery';
+  /*import * as jq from 'jquery';
   window.$ = jq
+
+  import 'webpack-jquery-ui';
+  import 'webpack-jquery-ui/css';*/
+
   import * as _ from 'lodash';
   window._ = _
   import conf from './core/conf'
@@ -20,15 +25,20 @@
   window.msg = msg
   import api from './core/api'
   window.api = api
+  import alertify from 'alertifyjs'
+  window.alertify = alertify
+  import store from './store/index.store'
+  window.store = store
 
   // init html head
   import head from './core/head'
   head.init(conf.head)
 
-  import { sync } from 'vuex-pathify'
-
   export default {
     name: 'app',
+  /*  components: {
+      ...form
+    }*/
   }
 </script>
 
