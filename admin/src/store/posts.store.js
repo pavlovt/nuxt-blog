@@ -1,4 +1,8 @@
-import {observable, action} from 'mobx'
+export default {
+  name: 'posts'
+}
+
+/*import {observable, action} from 'mobx'
 
 class Model {
     @observable
@@ -16,4 +20,4 @@ class Model {
     }
 }
 
-export default new Model()
+export default new Model()*/

@@ -1,5 +1,5 @@
 import * as form from '../parts/form'
-import store from '../store/index.store'
+// import store from '../store/index.store'
 
 export default {
   install(Vue, options) {
@@ -7,7 +7,7 @@ export default {
     Vue.mixin({
       created() {
         // add the store to each component
-        this.s = store
+        // this.s = store
       },
       methods: {
         

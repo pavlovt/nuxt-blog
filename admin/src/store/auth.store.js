@@ -1,7 +1,3 @@
-import {observable, action} from 'mobx'
-
-class Model {
-    
+export default {
+  name: 'auth'
 }
-
-export default new Model()

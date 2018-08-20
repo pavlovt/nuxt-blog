@@ -10,22 +10,14 @@ import BootstrapVue from 'bootstrap-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-import {observable, isObservable, toJS} from 'mobx';
-import VueMobx from 'vue-mobx';
+import store from './store/index.store'
 
 Vue.config.productionTip = false
 
 Vue.use(VeeValidate)
 Vue.use(BootstrapVue)
-
-Vue.use(VueMobx, {
-    toJS: toJS, // must
-    isObservable: isObservable, // must
-    observable: observable,  // optional
-})
-
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

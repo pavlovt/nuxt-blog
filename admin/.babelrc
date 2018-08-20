@@ -1,9 +1,13 @@
 {
   "presets": [
     "@vue/app",
-    ["@babel/preset-stage-2", { "loose": true, "decoratorsLegacy": true }]
+    "@babel/env"
   ],
   "plugins": [
-    "@babel/plugin-transform-runtime"
+    "@babel/plugin-transform-runtime",
+    ['wildcard', {
+      'useCamelCase': true,
+      'exts': ["js", "vue", "svg"]
+    }]
   ],  
 }
