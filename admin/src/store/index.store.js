@@ -1,4 +1,13 @@
-import post from './posts.store'
-import auth from './auth.store'
+// import post from './posts.store'
+// import auth from './auth.store'
 
-export default {post, auth}
+export default new Vuex.Store({
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  }
+})

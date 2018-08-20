@@ -3,7 +3,7 @@
     <h2>Posts</h2>
     <xinput name=title label=Filter v-model=title />
     <ul>
-      <li v-for="post in filter(title)" @click=show(post) :key=post.id>{{post.title}}</li>
+      <li v-for="post in posts" @click=show(post) :key=post.id>{{post.title}}</li>
     </ul>
   </div>
 </template>
@@ -16,14 +16,15 @@
 
     data() {
       return {
-        title: null
+        title: null,
+        posts: [],
       }
     },
 
     mounted() {
       // this.act('posts/get')
       // .then(res => this.posts = res)
-      this.get();
+      // this.get();
     },
 
     methods: {
@@ -31,9 +32,5 @@
         msg.info(`id: ${post.id}; body: ${post.body}`)
       }
     },
-
-    fromMobx: {
-      post: store.post
-    }
   }
 </script>
