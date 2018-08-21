@@ -8,6 +8,44 @@
   </div>
 </template>
 
+<script>
+  /*import * as jq from 'jquery';
+  window.$ = jq
+  import 'webpack-jquery-ui';
+  import 'webpack-jquery-ui/css';*/
+  import * as _ from 'lodash';
+  window._ = _
+  import conf from './core/conf'
+  window.conf = conf
+  window.apis = conf.server.apis
+  import core from './core/core'
+  window.core = core
+  
+  // import msg from './core/msg'
+  // window.msg = msg
+  // import api from './core/api'
+  // window.api = api
+  // import alertify from 'alertifyjs'
+  // window.alertify = alertify
+  // import 'font-awesome/css/font-awesome.min.css'
+
+  import './core/validators'
+
+  // init html head
+  import head from './core/head'
+  head.init(conf.head)
+
+  export default {
+    name: 'app',
+    data: () => ({
+
+    }),
+    components: {
+      
+    }
+  }
+</script>
+
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

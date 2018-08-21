@@ -1,9 +1,9 @@
-import router from '../router'
+// import router from '../router'
 
 class Core {
   // go to the specified route
   go(name, params = {}) {
-    router.push({name, params})
+    // router.push({name, params})
   }
 
   // return true if the value is [], {}, "", null, undefined
