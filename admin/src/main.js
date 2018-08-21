@@ -1,5 +1,5 @@
 // import 'jquery'
-import Vue from 'vue'
+// import Vue from 'vue'
 import corePlugin from './core/core.plugin'
 Vue.use(corePlugin)
 import App from './App.vue'

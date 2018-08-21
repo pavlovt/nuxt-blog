@@ -1,12 +1,11 @@
-{
-  "presets": [
-    "@vue/app",
-    "@babel/env"
+module.exports = {
+  presets: [
+    '@vue/app'
   ],
   "plugins": [
     ['wildcard', {
       'useCamelCase': true,
       'exts': ["js", "vue", "svg"]
     }]
-  ],  
+  ],
 }

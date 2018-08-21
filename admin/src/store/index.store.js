@@ -18,5 +18,5 @@ export default new Vuex.Store({
       state.count++
     }
   },
-  strict: debug,
+  // strict: debug,
 })
