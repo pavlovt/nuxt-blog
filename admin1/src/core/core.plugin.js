@@ -1,14 +1,14 @@
-import core from './core'
-window.core = core
-
+import Vue from 'vue'
+import _ from 'lodash'
 // import * as form from '../parts/form'
-// import * as seats from '../parts/seats'
-
-import store from 'src/store'
+import store from '../store'
 import container from 'bootstrap-vue/es/components/layout/container'
 import row from 'bootstrap-vue/es/components/layout/row'
 import col from 'bootstrap-vue/es/components/layout/col'
 
+import * as filters from './filters'
+filters = _.mapKeys(filters, (val, key) => key.replace('Filter', ''))
+console.log('filters', filters)
 export default {
   install(Vue, options) {
     // register methods and hooks in all app components
@@ -30,11 +30,7 @@ export default {
     // register all components
     // _(components).forIn((val, key) => Vue.component(key, val))
 
-    Vue.filter('capitalize', function (value) {
-      if (!value) return ''
-      value = value.toString()
-      return value.charAt(0).toUpperCase() + value.slice(1)
-    })
+    _(filters).forIn((val, key) => Vue.filter(key, val))
 
     Vue.component('container', container)
     Vue.component('row', row)

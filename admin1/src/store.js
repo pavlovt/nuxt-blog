@@ -9,7 +9,7 @@ console.log(modules)
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  modules: stores,
+  modules,
   state: {
     count: 0
   },

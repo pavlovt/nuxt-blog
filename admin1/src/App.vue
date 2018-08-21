@@ -21,13 +21,16 @@
   import core from './core/core'
   window.core = core
   
-  // import msg from './core/msg'
-  // window.msg = msg
-  // import api from './core/api'
-  // window.api = api
-  // import alertify from 'alertifyjs'
-  // window.alertify = alertify
-  // import 'font-awesome/css/font-awesome.min.css'
+  import msg from './core/msg'
+  window.msg = msg
+  import api from './core/api'
+  window.api = api
+  import alertify from 'alertifyjs'
+  window.alertify = alertify
+  import 'font-awesome/css/font-awesome.min.css'
+
+  import { sync } from 'vuex-pathify'
+  window.sync = sync
 
   import './core/validators'
 
