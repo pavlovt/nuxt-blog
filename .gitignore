@@ -3,5 +3,4 @@ dist
 yarn-error.log
 yarn-error.lock
 admin1/yarn.lock
-backend_old/yarn.lock
-shared/yarn.lock
+yarn.lock
