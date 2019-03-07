@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.0",
+    "chromelogger": "^1.1.1",
     "markdown-it-attrs": "^1.2.1",
     "markdown-it-container": "^2.0.0",
     "nuxt": "^2.4.5"

@@ -3,6 +3,10 @@ module.exports = {
     '@nuxtjs/markdownit'
   ],
 
+  router: {
+    middleware: ['core']
+  },
+
   // [optional] markdownit options
   // See https://github.com/markdown-it/markdown-it
   markdownit: {
