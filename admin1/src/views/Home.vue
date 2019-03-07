@@ -5,7 +5,7 @@
     <a href="#" @click="store.set('post/inc')">Inc posts</a><br>
     <ul>
       <!-- <li v-for="post in store.get('post/posts')">{{post.name}}</li> -->
-      <li v-for="post in posts">{{post.title}}</li>
+      <li v-for="post in posts" :key="post.id">{{post.title}}</li>
     </ul>
   </div>
 </template>
@@ -13,6 +13,19 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+
+// test optional chaining
+const obj = {
+  foo: {
+    bar: {
+      baz: 42,
+    },
+  },
+};
+
+const baz = obj?.foo?.bar?.baz; // 42
+const safe = obj?.qux?.baz; // undefined
+console.log('baz', baz, safe);
 
 export default {
   name: 'home',
